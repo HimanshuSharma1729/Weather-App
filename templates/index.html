@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <!-- Adding an image -->
+        <img src="/static/weather.webp" alt="Weather Icon" class="weather-image">
+
+        <form method="POST">
+            <input type="text" name="city" placeholder="Enter city" required>
+            <button type="submit">Get Weather</button>
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% elif weather %}
+            <p>The weather in {{ request.form.city }} is: <strong>{{ weather }}</strong></p>
+            <p>The temperature is: <strong>{{ temp }}ºF</strong></p>
+        {% endif %}
+    </div>
+</body>
+</html>
