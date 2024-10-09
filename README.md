@@ -12,7 +12,6 @@ A simple web application that allows users to retrieve real-time weather informa
 
 - **Python**: Backend development using Flask.
 - **Flask**: Web framework for building the application.
-- **SQLite**: Database for storing user data.
 - **HTML/CSS**: Frontend design and styling.
 - **OpenWeatherMap API**: API for fetching weather data.
 
